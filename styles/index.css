@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap');
+@import 'reset.css';
+
+:root {
+    --dark: #222;
+    --sub-dark: #112;
+
+    --link-background: #414;
+
+    --default-foreground: #fff;
+    --sub-foreground: #ccc;
+}
+
+* {
+    color: var(--default-foreground);
+}
+
+body {
+    padding: 2rem 1rem;
+    background: var(--dark);
+}
+
+header {
+    text-align: center;
+}
+
+h1, h3{
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+.showcase {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.cards {
+    max-width: 400px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: .8rem;
+    border-radius: 25px 0 25px 0;
+    background: var(--sub-dark);
+}
+
+.preview, .preview img{
+    width: 100%;
+}
+
+.specs {
+    display: flex;
+    padding: 0 .5rem;
+    justify-content: space-between;
+}
+
+.specs p {
+    font-size: .9rem;
+    color: var(--sub-foreground);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    row-gap: .2rem;
+}
+
+.technologies {
+    height: max-content;
+    align-self: center;
+    column-gap: .5rem;
+}
+
+.technologies img{
+    width: 25px;
+    height: 25px;
+}
+
+a {
+    margin-top: 1rem;
+    padding: .5rem 1.5rem;
+    align-self: flex-end;
+    border-radius: 5px;
+    cursor: pointer;
+    background: var(--link-background);
+}
+
+@media (min-width: 800px) {
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .showcase {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .cards {
+        max-width: 350px;
+        border-radius: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .showcase {
+        grid-template-columns: repeat(3, auto);
+    }
+}
